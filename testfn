@@ -6,6 +6,7 @@
 
 </head>
 <body>
+	<div id="test">test_txt</div>
 <script type="text/javascript">
 	// function Box(){
 	// 	this.name = 'lee';
@@ -139,31 +140,72 @@
 	// 	alert(b[i]);
 	// }
 
-	function box(){
-		var arr = [];
-		for(var i = 0; i < 5; i++){
-			arr[i] = (function(num){
-				return function(){
-					return num;
-				}
-			})(i);
-		}
-		return arr;
-	}
-	var b = box();
-	for(var i = 0; i < 5; i++){
-		alert(b[i]());
-	}
+	// function box(){
+	// 	var arr = [];
+	// 	for(var i = 0; i < 5; i++){
+	// 		arr[i] = (function(num){
+	// 			return function(){
+	// 				return num;
+	// 			}
+	// 		})(i);
+	// 	}
+	// 	return arr;
+	// }
+	// var b = box();
+	// for(var i = 0; i < 5; i++){
+	// 	alert(b[i]());
+	// }
 
-
-	// function Show(name){
-	// 	return {
-	// 		name : name,
-	// 		show : "show"
+	// var box = {
+	// 	user : 'the box',
+	// 	getUser : function(){
+	// 		var that = this;
+	// 		return function(){
+	// 			return that.user;
+	// 		}
 	// 	}
 	// }
-	// var opit = Show("xl")
-	// console.log(opit.name);
+	// alert(box.getUser()());
+
+	// function box(){
+	// 	(function(){
+	// 		for(var i=0;i<5;i++){
+	// 			console.log(i,1);
+	// 		}
+	// 	})();
+	// 	console.log(i,2);// i is not defined
+	// }
+	// box();
+
+	// var box = function(){
+	// 	var user = 'lee';
+	// 	function run (){
+	// 		return ' run...';
+	// 	}
+	// 	return {
+	// 		publicGo : function(){
+	// 			return user + run();
+	// 		}
+	// 	};
+	// }();
+	// alert(box.publicGo());
+
+	// 新建一个构造函数，返回一个实体
+	// function Desk(){};
+	// var box = function(){
+	// 	var user = 'lee';
+	// 	function run (){
+	// 		return ' run...';
+	// 	}
+	// 	var desk = new Desk();
+	// 	desk.publicGo = function(){
+	// 			return user + run();
+	// 		};
+	// 	return desk;
+	// }();
+	// alert(box.publicGo());
+
+	alert(document.getElementById("test").innerHTML);
 
 </script>
 
